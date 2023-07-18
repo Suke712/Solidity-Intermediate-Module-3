@@ -9,7 +9,6 @@ contract A{
 }
 
 contract B{
-    address private addressOfA;
 
     function callA(address _addressOfA) external payable{
         (bool success, ) = _addressOfA.call(abi.encodeWithSignature("Withdraw()"));
